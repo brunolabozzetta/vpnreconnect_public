@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VPN RECONNECT
 ## _Un script desarrollado en Python para reconectar FortiClient de forma automática_
 
@@ -57,3 +58,6 @@ VPN RECONNECT necesita Python 3 en adelante para funcionar correctamente
 
 Si quieres contribuir a este pequeño desarrollo, siéntete libre de hacer un pull request y con gusto lo estaré revisando.
 Gracias por interesarte en este código.
+=======
+# vpnreconnect_public
+>>>>>>> d06c3ab7870aaf9fc1062b520855d8c4a7c5c3b9
