@@ -7,9 +7,10 @@ Si trabajás en un NOC (Network Operating Center), y utilizás una conexión VPN
 
 ## _¿Como funciona?_
 
-VPN RECONNECT consta de 2 instancias que trabajan en conjunto.
+VPN RECONNECT consta de 3 instancias que trabajan en conjunto.
 - Archivo compilado en *.py.
 - Archivo de lotes (*.bat)
+- Tool de Fortinet, quien recibe los parámetros via linea de comandos para conectar la VPN.
 
 > El script principal funciona como un "listener", 
 > apuntando a una dirección ip que se encuentra 
