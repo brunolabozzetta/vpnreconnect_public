@@ -1,5 +1,5 @@
 # VPN RECONNECT
-## _Un script desarrollado en Python para reconectar FortiClient de forma automática_
+## _Un script desarrollado en Python para reconectar una conexión VPN via FortiClient o via Windows, de forma automática_
 
 VPN RECONNECT es un pequeño script pensado para hacerle la vida mas fácil a analistas de infraestructura y administradores de red.
 
@@ -17,12 +17,15 @@ VPN RECONNECT consta de 3 instancias que trabajan en conjunto.
 > en la red a la cual debieras estar conectado.
 > Al momento en que el ping empieza a fallar
 > el programa ejecutará el .bat que ejecutará
-> el forticlient a través de comandos pre-configurados
+> el forticlient a través de parámetros pre-configurados
 > con el fin de reconectar la conexión VPN.
+>
+> En caso de conexiones Windows es tan solo un comando. [rasdial previus_vpn user password123]
 >
 > En la instancia 'ONLINE' veremos el fondo de color verde.
 > En la instancia 'OFFLINE' veremos el fondo de color rojo.
-> Esto es con el fin de tener una señal visual de que la conexión está caída.
+> En breve el programa chequeará una condición predeterminada, (en este caso, una conexión VPN puente), si se encuentra offline esta conexión, la conectará y luego ejecutará los > parámetros hacia fortitools para conectar la VPN de Fortinet. De encontrarse conectada, ejecutará este ultimo paso directamente.
+> Mientras chequea esta condición previa y trabaja en reconectar esa conexión puente, la pantalla se verá en color amarillo.
 >
 > Para tener una señal sonora de la caída de la conexión,
 > recomiendo herramientas mas eficientes como Cacti, Nagios,
@@ -35,6 +38,7 @@ VPN RECONNECT necesita Python 3 en adelante para funcionar correctamente
 
 > [Python](https://www.python.org/downloads/) v3+ to run.
 > Windows (Testeado en Windows 10, pero debería funcionar en Windows 7 sin problemas).
+> FortiTools 6.0+ (Incluido en este repositorio).
 
 ## _Ejecución_
 
